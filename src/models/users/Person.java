@@ -17,19 +17,19 @@ public class Person {
         return surname;
     }
     public void setName(String name) {
-        if(name !=null && name.matches("/^[\\p{Letter}\\s\\-.']{1,40}/u"))
+        if(name !=null && name.matches("^[A-ZĀČĒĢĪĶĻŅŠŪŽ][a-zāčēģīķļņšūž]*$"))
             this.name = name;
         else
             this.name = "------";
     }
     public void setPersonCode(String personCode) {
-        if(surname !=null && surname.matches("/^(\\d{6})-[012]\\d{4}$/"))
+        if(personCode !=null && personCode.matches("[0-9]{6}-[0-9]{5}"))
             this.personCode = personCode;
         else
             this.personCode = "------";
     }
     public void setSurname(String surname) {
-        if(surname !=null && surname.matches("/^[\\p{Letter}\\s\\-.']{1,40}/u"))
+        if(surname !=null && surname.matches("^[A-ZĀČĒĢĪĶĻŅŠŪŽ][a-zāčēģīķļņšūž]*$"))
             this.surname = surname;
         else
             this.surname = "------";
@@ -50,7 +50,7 @@ public class Person {
 
     //4. toString
     public String toString(){
-        return "Vārds: " + name + "\n" + "Uzvārds: " + "\n" + "Personas kods: " + personCode + "\n";
+        return "Vārds: " + name + "\n" + "Uzvārds: " + surname + "\n" + "Personas kods: " + personCode + "\n";
     }
     //5. other functions
 }

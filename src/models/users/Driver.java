@@ -4,7 +4,7 @@ public class Driver extends Person{
     //1. variable
     private static long dID = 0;
     private String licenseNo;
-    private float experienceInYears;
+    private double experienceInYears;
     //2 get and set
     public long getdID() {
         return dID;
@@ -12,16 +12,16 @@ public class Driver extends Person{
     public String getLicenseNo() {
         return licenseNo;
     }
-    public float getExperienceInYears() {
+    public double getExperienceInYears() {
         return experienceInYears;
     }
     public void setLicenseNo(String licenseNo) {
-        if(licenseNo != null && licenseNo.matches("/[A-Z]{1,2}-[0-9]{1,4}/gm"))
+        if(licenseNo != null && licenseNo.matches("^[A-Z]{2}[0-9]{6}$"))
             this.licenseNo = licenseNo;
         else 
             this.licenseNo = "----";
     }
-    public void setExperienceInYears(float experienceInYears) {
+    public void setExperienceInYears(double experienceInYears) {
         if(experienceInYears >= 0 && 99 >= experienceInYears)
             this.experienceInYears = experienceInYears;
         else   
@@ -36,11 +36,11 @@ public class Driver extends Person{
         setExperienceInYears(0);
     }
  
-    public Driver(String licenseNo, float experienceInYears) {
-        super();
-        dID++;
+    public Driver(String name, String surname, String personCode, String licenseNo, double experienceInYears) {
+        super(name, surname, personCode);
         setLicenseNo(licenseNo);
         setExperienceInYears(experienceInYears);
+        dID++;
     }
  
     //4. toString
