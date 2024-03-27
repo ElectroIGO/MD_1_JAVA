@@ -36,9 +36,9 @@ public class Person {
     }
     //3. constructors
     public Person() {
-        setName("-----");
-        setSurname("-----");
-        setPersonCode("-----");
+        setName("Alfrēds");
+        setSurname("Mazspānis");
+        setPersonCode("654321-12345");
         
     }
 

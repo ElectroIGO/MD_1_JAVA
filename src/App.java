@@ -3,6 +3,8 @@ import java.time.LocalDateTime;
 import models.Address;
 import models.City;
 import models.Parcel;
+import models.users.CustomerAsCompany;
+import models.users.CustomerAsPerson;
 import models.users.Driver;
 import models.users.Person;
 import models.ParcelSize;
@@ -17,5 +19,18 @@ public class App {
         System.out.println(Majoklis);
         Parcel pas1 = new Parcel(LocalDateTime.now().plusDays(3), ParcelSize.XL, true, Kaspars);
         System.out.println(pas1);
+        CustomerAsCompany cc1 = new CustomerAsCompany();
+        CustomerAsCompany cc2 = new CustomerAsCompany();
+        CustomerAsCompany cc3 = new CustomerAsCompany();
+        System.out.println(cc1);
+        System.out.println(cc2);
+        System.out.println(cc3);
+        CustomerAsPerson cp1 = new CustomerAsPerson();
+        CustomerAsPerson cp2 = new CustomerAsPerson();
+        CustomerAsPerson cp3 = new CustomerAsPerson();
+        System.out.println(cp1);
+        System.out.println(cp2);
+        System.out.println(cp3);
+
     }
 }
