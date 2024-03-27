@@ -1,7 +1,11 @@
+import java.time.LocalDateTime;
+
 import models.Address;
 import models.City;
+import models.Parcel;
 import models.users.Driver;
 import models.users.Person;
+import models.ParcelSize;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -11,5 +15,7 @@ public class App {
         System.out.println(Kaspars);
         Address Majoklis = new Address(City.Daugavpils, "Jaunatnes iela", 20);
         System.out.println(Majoklis);
+        Parcel pas1 = new Parcel(LocalDateTime.now().plusDays(3), ParcelSize.XL, true, Kaspars);
+        System.out.println(pas1);
     }
 }

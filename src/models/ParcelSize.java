@@ -1,5 +1,5 @@
 package models;
 
 public enum ParcelSize {
-    X, S, M, L, XL
+    XS, S, M, L, XL
 }
