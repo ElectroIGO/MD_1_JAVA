@@ -1,7 +1,5 @@
 package models.users;
 
-import javax.swing.AbstractAction;
-
 import models.Address;
 
 public class CustomerAsCompany extends AbstractCustomer {
@@ -55,8 +53,8 @@ public class CustomerAsCompany extends AbstractCustomer {
         setCustomerCode();
     }
     //4. toString
-    public String toString(){
-        return "Kompānijas nosaukums: " + getTitle() + " reg nr: " + getCompanyRegNo() + " Customer code: " + super.getCustomerCode();
+    public String toString() {
+        return "Kompānijas nosaukums: " + getTitle() + " reg nr: " + getCompanyRegNo() + " Customer code: " + super.getCustomerCode() + " " + super.getAddress();
     }
     //5. other functions
     @Override

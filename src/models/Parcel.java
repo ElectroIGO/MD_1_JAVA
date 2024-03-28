@@ -40,7 +40,7 @@ public class Parcel {
         this.orderCreated = orderCreated;
     }
     public void setPlannedDelivery(LocalDateTime plannedDelivery) {
-        if (plannedDelivery.compareTo(orderCreated) > 1){
+        if (plannedDelivery.compareTo(orderCreated) > 0){
             this.plannedDelivery = plannedDelivery;
             return;
         } 
@@ -83,16 +83,16 @@ public class Parcel {
     }
     public Parcel(LocalDateTime plannedDelivery, ParcelSize size, boolean isFragile, Driver driver) throws Exception{
         setOrderCreated(LocalDateTime.now());
+        setPlannedDelivery(plannedDelivery);
         setFragile(isFragile);
         setDriver(driver);
         setSize(size);
         setPrice();
-        setPlannedDelivery(plannedDelivery);
     }
  
     //4. toString
      public String toString(){
-         return "Pasūtijums pasūtīts: " + getOrderCreated() + " Pasūtijuma izpildes laiks: " + getPlannedDelivery() + " cena: " + getPrice()  + "Kurjieris" + this.driver;
+         return "Pasūtijums pasūtīts: " + getOrderCreated() + " Pasūtijuma izpildes laiks: " + getPlannedDelivery() + " cena: " + getPrice()  + " Kurjieris \n" + this.driver;
      }
     //5. other functions
     

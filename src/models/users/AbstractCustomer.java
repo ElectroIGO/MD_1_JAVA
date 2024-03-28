@@ -55,7 +55,7 @@ public abstract class AbstractCustomer {
     //3. constructors
     public AbstractCustomer() {
         cID++;
-        setAddress(address);
+        setAddress(new Address());
         setPhoneNo("22343454");
     }
  

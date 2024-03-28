@@ -18,7 +18,7 @@ public class CustomerAsPerson extends AbstractCustomerAsPerson {
  
     //4. toString
      public String toString(){
-         return "Vārds: " + super.getPerson().getName() + " Uzvārds: " + super.getPerson().getSurname() + " Klienta kods: " + super.getCustomerCode();
+         return "Vārds: " + super.getPerson().getName() + " Uzvārds: " + super.getPerson().getSurname() + " Klienta kods: " + super.getCustomerCode() + " " + super.getAddress();
      }
     //5. other functions
     @Override
